@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost';
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4A7973, #E0DFD5, #4A7973);
+    padding: 10px;
+    background-size: cover;
+}
+
+.todoApp {
+    max-width: 540px;
+    width: 100%;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #313638;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F3F7F7;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #4A7973;
+    color: white;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #313638;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(assets/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #313638;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    color: #4A7973;
+}
+
